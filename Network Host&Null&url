@@ -1,0 +1,27 @@
+##host##
+same ip will allocate in host n/w aslo
+ports will not allocated in host if port farwding also
+
+docker run -d -p 81:80 --network host ngnix:latest
+
+##port-80 serrvice#
+ngnix and apache2 --> in 80 this services will run
+
+ps -ef | grep 80 --> it track the running port by using grep
+
+##Services status and delete the services##
+service apache2 status --> to check the status of service
+service apache2 status  --> to stop the services
+apt-get purge apache2 --> to uninstall the services
+apt-get remove apache2
+apt-get autoremove apache2
+
+##Null##
+network connection not avaible to download and update.
+login in contianer not able to download anything bcoz n/w not avaible.
+
+docker run -d -p 81:80 --network none ngnix:latest
+docker exec -it contianrname --> to logn in container
+
+##Docker cmds URL##
+https://docs.docker.com/engine/reference/commandline/port/
