@@ -1,0 +1,5 @@
+by use volumes to take the backup only container particualr location
+the application will take bakup by using volumes
+
+##check Volume##
+docker volume ls --> to check the volumes
