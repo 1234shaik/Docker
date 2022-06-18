@@ -1,0 +1,11 @@
+##About Docker##
+Docker is containerization platflorm
+use for application deplyment 
+
+Containers are lightweight, it won't take much time to spin up new container. as per our requiremts creating vmachine.
+
+Host-->Docker -->Container -->Application  -> how much memory,H/W in host will take the memory in that host.  
+In Docker internal have cgruops or control group compunents are available, it will take care H/W , memory etc.. control group will take care.
+when install docker it automatically  will control group component availabe.
+
+
