@@ -30,5 +30,14 @@ Networking
 ##Docker Installation in VM##
 yum install Docker.io --> Linux
 apt-get install Docker.io --> ubuntu
+docker info --> to check versin and operating system
+
+##Docker Pull or run Images##
+
+when pull the image it will check in docker host (where install the docker) , when docker install internally Docker daemon component available .in that daemon it check that image .
+  in case image is not avaiable  in docker host then only it download from registry. 
+
+Docker pull imagename --> it will download the image from docker registry if it not present in local
+Docker  images --> to chceck the docker images.
 
 
