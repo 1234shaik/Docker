@@ -10,3 +10,70 @@ when pull the image it will check in docker host (where install the docker) , wh
 
 Docker pull imagename --> it will download the image from docker registry if it not present in local
 Docker  images --> to chceck the docker images.
+
+##Unique id##
+image,voulume, container will have unique id's.
+they have specfic uniquie ids.
+
+##List of ports##
+netstat  -- > to check the listenof ports running.
+
+
+##How to Create the Image to container##
+will create by using imageid/imagename:tag 
+
+-it (intreactice mode)-->the application will start but we cont do anything in our vm
+-d (detached mode) --> the applicatin will start and we can use in pur vm.
+
+from one image will create number of container. but port will different if port port farwording and container name also if providing conatiner.
+
+
+docker run -it -p hostport:containerport imageid:tag/imageid --> it will downaload image the image (if not present) and it will create the container 
+docker run -it    -p    81:80
+docker run -d -p hostport:containerport image --> it will downaload image the image (if not present) and it will create the container 
+docker run -d   -p    81:80
+
+##same image number of container creation##
+
+docker run -d -p 81:80 --name test1 niginx
+docker run -d -p 81:80 --name test2 niginx
+
+##Login in container##
+dpcker exec -it containerid/containername bash/sh/ --> login into the container
+docker exec -it test1 bash
+
+
+
+
+##Docker inspect##
+inspect means will get the details information
+if provide the name if not it take randaomally.
+
+docker inspect containername/contanerid --> to inspect the container details.
+doeckrt inspect imageid/imagename:tafg --> to inspect the image details.
+
+##Container network##
+
+by using network drivers ip will assign to containers.
+when docker install by default network drives --> host, bridge, null.
+
+
+ container ip and instance ip are different bcoz --> it take will take from bridge n/w 
+ 
+ note - by default docker container are launch under brige n/w , bridge n/w has one default subnet.
+ 
+ docker inspect bride --> to inspect the bridge
+ 
+ ##Docker Delete images and containers##
+docker ps --> to check all the running container.
+docaker ps -a --> to check all list of containers.
+docker rm -f --> delete the container (containerid or containername)
+docker rmi -f --> delete the imagae (imageid/imaagename:tag)
+  
+  2ways to delete the containers
+       docker rm -f conainername1 containernam2 --> it will delete the containers
+       docker rm -f $(docker ps) --> it will delete the all running contianer at a time
+       docker rm -f $(docker images) --> it will delete the all images at a time
+ 
+
+
