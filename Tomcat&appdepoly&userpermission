@@ -1,0 +1,19 @@
+##Tomcat installation & deploy the applicaion##
+
+in comtainer tomcat have to install and deploy the application
+copy the war file in tomcat webapps
+tomcat default port 8080
+
+docker pull tomcaturl(dokcerhub predefined image) --> by using dockerhub installing image
+docker run -d -p 8081:8080 imageid/imagename:tag -->image to creating container
+docker exec -it contanierid bash -->login in container
+scp "pemkey" warfile ec2@ipaddree:~
+
+##copy file in running contianer & deploy##
+docker cp source contianerid:tomatctwebapps path (destination path) --> application will deploy in running container
+
+##provide the permission to user##
+usermod -a -G docker username(ec2 or ubuntu) --> to provide the permssion to that user (only docker will have access to excute the cmds not all cmds)
+service docker restart
+chmod 777 /var/run/docker.sock --> provide the all permission
+
