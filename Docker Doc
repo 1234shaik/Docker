@@ -9,3 +9,26 @@ In Docker internal have cgruops or control group compunents are available, it wi
 when install docker it automatically  will control group component availabe.
 
 
+##Terminologies##
+Images -->
+          2Types-->
+                   1)Docker Hub or Register Images we called as predefined images. some one created and push to Docker hub.
+                   2)Customer Images --> manam create chestham.
+##Process for Docker Images##
+will write Docker File --> Convert to image -->image to create the container.
+        in Docker file have for example deploy the java apliication in tomcat.
+        in container required java and tomacat required and decide to operating ssystem also --> will place to Docker file.
+        java,tomcat installation cmd and os --> will place to Docker file and conver to image (image is a package will not change)
+        any chanhges in comtainer will not refelect in image
+
+##Terminologies##
+containers
+Docker files
+Volumes
+Networking
+
+##Docker Installation in VM##
+yum install Docker.io --> Linux
+apt-get install Docker.io --> ubuntu
+
+
