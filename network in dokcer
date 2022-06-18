@@ -1,0 +1,8 @@
+##Custome contianer##
+
+docker network ls --> li
+docker network create -d bridge n/wname --> it will create bridge n/w as per our create n/wname.
+
+subnet will take by deafult if not provided
+
+docker run -d -p 81:80 --network n/wname ngnix --> creating contianer in our own n/e whcich we create. 
