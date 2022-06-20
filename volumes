@@ -1,5 +1,16 @@
 by use volumes to take the backup only container particualr location
-the application will take bakup by using volumes
+contianer using for app deployement where application deployment that will take bakup by using volumes.
+remaining thing will get predefined images or installation.
+2way sink, if any changes in imagepath or databackup path it will sink on both  
 
 ##check Volume##
 docker volume ls --> to check the volumes
+
+##Volume Create##
+docker volume create testvol --> to create the volume
+docker inspect testvol
+             /var/lib/docker/volumes/testvol/_data
+docker run -d -p 8081:8080 -v testvol:containerpath imageid -->attaching volume to the container
+
+##Delete Volume#
+docker volume rm volumenames
