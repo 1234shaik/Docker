@@ -1,0 +1,3 @@
+docker pull ubuntu --> when pull the image will get the imageid
+docker ps -a --> the ubuntu will not reflect by using below cmd it will show.
+docker run -d imageid sleepinfinity --> by using cmd instruction override from the cmd line. 
