@@ -18,3 +18,5 @@ docker file starts --
 
 ##Docker File##
 vi dockerfile
+      FROM ubuntu
+      
